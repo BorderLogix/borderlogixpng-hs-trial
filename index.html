@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BORDERLOGIX HS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .text-shadow {
+        text-shadow: 0 0 15px var(--tw-shadow-color);
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'rajdhani': ['Rajdhani', 'sans-serif'],
+              'source-code-pro': ['Source Code Pro', 'monospace'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#00a86b',
+                'dark': '#008555',
+              },
+              secondary: '#1a1a2e',
+              accent: '#ff6b35',
+              'bg-main': '#0f0f1e',
+              'bg-card': '#1a1a2e',
+              'text-primary': '#e8e8e8',
+              'text-secondary': '#a8a8b8',
+              'border-color': '#2a2a3e',
+              'success': '#00d084',
+              'warning': '#ffa94d',
+              'error': '#ff6b6b',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@0.468.0?external=react,react-dom",
+    "@google/genai": "https://esm.sh/@google/genai@0.14.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react": "https://esm.sh/react@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="font-rajdhani bg-bg-main text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
